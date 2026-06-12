@@ -13,7 +13,8 @@ import (
 var col *mongo.Collection
 
 func connectMongo() *mongo.Client {
-	uri := getEnv("MONGODB_URI", "mongodb://localhost:27017")
+	//uri := getEnv("MONGODB_URI", "mongodb://localhost:27017")
+	uri := getEnv("MONGODB_URI", "mongodb://sa:sa@192.168.100.106:27017")
 	clientOpts := options.Client().
 		ApplyURI(uri).
 		SetMaxPoolSize(200).
